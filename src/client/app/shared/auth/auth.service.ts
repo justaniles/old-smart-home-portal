@@ -2,7 +2,7 @@
  * This class provides the NameList service with methods to
  * read names and add names.
  */
-export class NameListService {
+export class AuthService {
 
     /**
      * The array of initial names provided by the service.

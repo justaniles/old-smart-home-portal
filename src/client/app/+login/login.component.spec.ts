@@ -9,7 +9,7 @@ import {
 import {getDOM} from '@angular/platform-browser/src/dom/dom_adapter';
 
 import {NameListService} from '../shared/index';
-import {HomeComponent} from './home.component';
+import {LoginComponent} from './login.component.ts';
 
 export function main() {
     describe('Home component', () => {
@@ -46,7 +46,7 @@ export function main() {
     providers: [NameListService],
     selector: 'test-cmp',
     template: '<sd-home></sd-home>',
-    directives: [HomeComponent]
+    directives: [LoginComponent]
 })
 class TestComponent {
 }

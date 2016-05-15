@@ -1,0 +1,9 @@
+pc-login {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.pc-login-container {
+    background-color: red;
+}
