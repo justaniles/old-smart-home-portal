@@ -1,20 +1,22 @@
 import {FORM_DIRECTIVES} from '@angular/common';
-import {Component} from '@angular/core';
+import {ViewEncapsulation, Component} from '@angular/core';
 
 import {UserService} from "../shared/index";
 
 @Component({
-    selector: 'pc-login',
+    selector: '.pc-login',
     templateUrl: 'app/+login/login.component.html',
     styleUrls: ['app/+login/login.component.css'],
-    directives: [FORM_DIRECTIVES]
+    directives: [FORM_DIRECTIVES],
+    encapsulation: ViewEncapsulation.None
 })
 /**
  * This class represents the lazy loaded LoginComponent.
  */
 export class LoginComponent {
 
-    newName:string;
+    email: string;
+    password: string;
 
     /**
      * Creates an instance of the LoginComponent with the injected
@@ -22,10 +24,10 @@ export class LoginComponent {
      *
      * @param {UserService} userService the injected UserService
      */
-    constructor(public userService:UserService) {
+    constructor(public userService: UserService) {
     }
 
-    login(email: string, password: string) {
-        this.userService.loginUser(email, password);
+    login() {
+        this.userService.loginUser(this.email, this.password);
     }
 }

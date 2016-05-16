@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {ROUTER_DIRECTIVES, Routes} from '@angular/router';
 
 import {AboutComponent} from './+about/index';
@@ -10,7 +10,8 @@ import {UserService, NameListService, NavbarComponent, ToolbarComponent} from '.
     selector: 'pc-app',
     viewProviders: [NameListService, UserService],
     templateUrl: 'app/app.component.html',
-    directives: [ROUTER_DIRECTIVES, NavbarComponent, ToolbarComponent]
+    directives: [ROUTER_DIRECTIVES, NavbarComponent, ToolbarComponent],
+    encapsulation: ViewEncapsulation.None
 })
 @Routes([
     {

@@ -5,7 +5,7 @@
 export class UserService {
 
     loginUser(email: string, password: string): void {
-        console.log(`user: {email} password: {password}`);
+        console.log(`user: ${email} password: ${password}`);
     }
 
     logoutUser(email: string) {
